@@ -44,7 +44,6 @@ if (y_spd > 0){
 	if (y > room_height+50 and y < room_height + 60) and (global.spawn_timer < 400){
 		instance_create_layer(x,153,"Stars", obj_stars);	
 		audio_play_sound(snd_death,4,false);
-		global.p2_score--;	
 	}
 	for (var dist_moved = 0; dist_moved < y_spd; dist_moved ++){
 		new_y = y+dist_moved; //move 1 pixel at a time
@@ -65,8 +64,12 @@ if (y_spd > 0){
 				}
 					if (collidewith.object_index == obj_p1){
 					audio_play_sound(snd_KO,2,false);
-					ScreenShake(5,20);
-					global.p2_score++;	
+					ScreenShake(5,20);	
+					if (global.p1has_ball == true){
+							audio_play_sound(snd_pickup,8, false);
+						global.p1has_ball = false;
+						global.p2has_ball = true;
+					}
 					instance_create_layer(obj_p1.x,obj_p1.y,"Stars", obj_KOstars);
 					y_spd = jump_spd+2; 
 					global.p1has_control = false;
@@ -102,6 +105,14 @@ sprite_index = spr_player2dead;
 }
 //restart if you fall out of the room
 if (y > room_height+50){
+if (global.p2has_ball == true){
+		global.p2has_ball = false;
+		audio_play_sound(snd_drop,8, false);
+		if (global.p2_score < 5){
+		global.p2_score +=1;
+		}
+		instance_create_layer(115,-25,"Instances",obj_ballPickUp);
+}
 	if (global.p2has_control == false){
 	global.p2has_control = true;
 	}
@@ -117,6 +128,3 @@ if (y > room_height+50){
 	}
 }
 
-
-//restart if you press R
-if (keyboard_check_pressed(ord("R"))) room_restart();

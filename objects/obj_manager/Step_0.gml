@@ -51,3 +51,60 @@ if (global.spawn_timer >200){
 
 
 
+if (global.p1_score == 60){
+	instance_destroy(obj_p2);
+	instance_destroy(obj_p1);
+	global.p1has_ball = false;
+	global.p1_win = true;
+	if (keyboard_check_pressed(ord("R"))) room_restart();
+	instance_create_layer(34,(room_height/2)+50,"Stars",obj_confetti);
+	instance_create_layer(98,(room_height/2)+50,"Stars",obj_confetti);
+	instance_create_layer(162,(room_height/2)+50,"Stars",obj_confetti);
+	if (sound_timer > 0){
+		sound_timer--;
+		if (sound_timer <10 and sound_timer >0){
+		audio_play_sound(snd_win,6,false);
+		}
+	}
+}
+if (global.p2_score == 60){
+	instance_destroy(obj_p2);
+	instance_destroy(obj_p1);
+	global.p2has_ball = false;
+	global.p2_win = true;
+	if (keyboard_check_pressed(ord("R"))) room_restart();
+	instance_create_layer(34,(room_height/2)+50,"Stars",obj_confetti);
+	instance_create_layer(98,(room_height/2)+50,"Stars",obj_confetti);
+	instance_create_layer(162,(room_height/2)+50,"Stars",obj_confetti);
+	
+	if (sound_timer > 0){
+		sound_timer--;
+		if (sound_timer <10 and sound_timer >0){
+		audio_play_sound(snd_win,6,false);
+		}
+	}
+}
+
+
+
+
+
+
+
+if (global.spawn_timer < 750 and global.spawn_timer > 745){
+audio_play_sound(snd_beepLow,4,false);		
+}
+
+if (global.spawn_timer < 699 and global.spawn_timer > 694){
+audio_play_sound(snd_beepLow,4,false);			
+}
+
+if (global.spawn_timer < 649 and global.spawn_timer > 644){
+audio_play_sound(snd_beepLow,4,false);			
+}
+if (global.spawn_timer < 599 and global.spawn_timer > 594){
+audio_play_sound(snd_beepLow,4,false);		
+}
+if (global.spawn_timer < 549 and global.spawn_timer > 544){
+audio_play_sound(snd_beepHigh,4,false);		
+}

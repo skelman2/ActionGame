@@ -93,6 +93,48 @@
             "value": "0",
             "varName": "global.p2_score",
             "varType": 1
+        },
+        {
+            "id": "0a49e674-9455-4663-92b6-7e8911a29aca",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "global.p1_win",
+            "varType": 3
+        },
+        {
+            "id": "fc3cb282-1e28-4a23-9406-153f5ed53a90",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "global.p2_win",
+            "varType": 3
+        },
+        {
+            "id": "94fb1e82-179f-4ff8-848f-8517b8fe5627",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "10",
+            "varName": "sound_timer",
+            "varType": 1
         }
     ],
     "solid": false,

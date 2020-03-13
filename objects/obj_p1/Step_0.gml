@@ -44,7 +44,6 @@ if (y_spd > 0){
 	
 	if (y > room_height+50 and y < room_height + 60) and (global.spawn_timer < 400){
 	instance_create_layer(x,153,"Stars", obj_stars);	
-	global.p1_score--;	
 	audio_play_sound(snd_death,4,false);
 	}
 	
@@ -68,7 +67,11 @@ if (y_spd > 0){
 					if (collidewith.object_index == obj_p2){
 					audio_play_sound(snd_KO,2,false);
 					ScreenShake(5,20);
-					global.p1_score++;	
+					if (global.p2has_ball == true){
+							audio_play_sound(snd_pickup,8, false);
+						global.p2has_ball = false;
+						global.p1has_ball = true;
+					}
 					instance_create_layer(obj_p2.x,obj_p2.y,"Stars", obj_KOstars);
 					y_spd = jump_spd+2; 
 					global.p2has_control = false;
@@ -103,6 +106,14 @@ if (y < room_height-100){
 
 //restart if you fall out of the room
 if (y > room_height+50){
+	if (global.p1has_ball == true){
+		audio_play_sound(snd_drop,8, false);
+		global.p1has_ball = false;
+		if (global.p1_score < 5){
+		global.p1_score +=1;
+		}
+		instance_create_layer(115,-25,"Instances",obj_ballPickUp);
+	}
 	if (global.p1has_control == false){
 	global.p1has_control = true;
 	}
@@ -117,6 +128,10 @@ if (y > room_height+50){
 		}
 	}
 }
+
+
+
+
 
 
 //restart if you press R
