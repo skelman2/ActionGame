@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "20855443-0fae-4f41-9f57-a65a0f5ae198",
+            "Value": {
+                "id": "1f24adc9-01b2-4d3d-a415-fa406761d256",
+                "resourcePath": "sounds\/snd_start\/snd_start.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "22c773e4-0c38-4edc-ae4c-72e31e475681",
             "Value": {
                 "id": "16d9fef1-4ac8-4422-a9eb-99e883a6ab38",
@@ -447,6 +455,14 @@
             }
         },
         {
+            "Key": "bc3741d1-4e03-413b-9dda-ab913f009e7d",
+            "Value": {
+                "id": "1de93d78-3c95-44ab-91ef-fce0074f0ebb",
+                "resourcePath": "fonts\/font_start\/font_start.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "be389c7c-3031-4e75-b31a-01f034cc3b0e",
             "Value": {
                 "id": "d303b1f1-fed7-4ea3-a130-39b8d18c91be",
@@ -532,6 +548,14 @@
                 "id": "30b081ed-360b-4790-ac30-7d3c1c994452",
                 "resourcePath": "options\/android\/options_android.yy",
                 "resourceType": "GMAndroidOptions"
+            }
+        },
+        {
+            "Key": "e8e943b3-92d7-4b54-baf2-1699de0d8f44",
+            "Value": {
+                "id": "cda9e840-cf4d-4194-a548-bba44411c149",
+                "resourcePath": "fonts\/font_controls\/font_controls.yy",
+                "resourceType": "GMFont"
             }
         },
         {

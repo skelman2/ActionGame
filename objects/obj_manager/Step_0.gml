@@ -18,7 +18,10 @@
 	instance_create_layer(new_x,new_y,"Instances",obj_platform);
 	}
 
-
+if (keyboard_check_pressed(vk_space)){
+	game_start = true;
+	audio_play_sound(snd_start,7,false);
+}
 
 
 if (global.spawn_timer < 450){
@@ -35,7 +38,7 @@ if (global.spawn_timer < 450){
 
 
 
-if (global.spawn_timer >200){
+if (global.spawn_timer >200 and game_start == true){
 	global.spawn_timer -=1;
 
 	if (global.spawn_timer == 500){

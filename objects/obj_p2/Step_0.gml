@@ -1,8 +1,8 @@
 if (global.p2has_control == true){
-if (keyboard_check(ord("A"))){
+if (keyboard_check(vk_left)){
 	x_spd -= x_accel;
 }
-if (keyboard_check(ord("D"))){
+if (keyboard_check(vk_right)){
 	x_spd += x_accel;
 }
 }

@@ -18,6 +18,6 @@
 
 global.p1_score = 0;
 global.p2_score = 0;
-
+game_start = false;
 
 audio_play_sound(snd_background,1,true);
